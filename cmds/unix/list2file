@@ -1,0 +1,2 @@
+#Create a file with all matched files paths
+cat - > filelist.txt

@@ -1,0 +1,2 @@
+#Tar in bz2 , good compression ratio but computationally more expensive 
+xargs tar -jcvf archive_name.tar.bz2 

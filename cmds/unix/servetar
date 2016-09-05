@@ -1,0 +1,3 @@
+#Create a server that hosts a folder (or tar file) with the matched files
+#On the receiving end execute nc YOUR_IP 9000 | tar x
+xargs tar -cvf - | nc -l 9000

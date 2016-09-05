@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <title>Flexecute</title>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="options">
+            <div id='help'>
+                <label class="input"> Help </label>
+                <pre>
+View the files and folders that match a pattern. 
+Then execute a preset or custom command with the matches through stdin.
+All folders end with '/' 
+    if input starts with '/' -> RegExp 
+    else String -> 
+        *   => Any match 
+        */  => Any folder
+        **  => Recursive 
+        **/ => Recursive folder 
+        _   =>  === string
+      </pre>
+            </div>
+            <div id="rootinput" class='input' contenteditable="true">./</div>
+            <div id="search-status"> </div>
+        </div>
+        <div id="pattern"> </div>
+    </div>
+    <div id='main'>
+        <div id='explorer'>
+        </div>
+        <div id="executor">
+            <div id="preset-selection">
+                <label id="showpreset" class="input"> Preset </label>
+                <ul id="presets"> </ul>
+            </div>
+            <div id="terminal">
+                <div id='executions'></div>
+                <div class="prompt">
+                    <pre><i class="prompt-token"></i><code id="cmdinput"  contenteditable="true"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/utils.js"></script>
+<script src="./js/terminal.js"></script>
+<script src="./js/explorer.js"></script>
+
+</html>

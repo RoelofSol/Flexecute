@@ -1,0 +1,2 @@
+# Concat the content of all matches to a file. (Carefull, directories are not supported)
+xargs cat >> output.txt

@@ -1,0 +1,199 @@
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #2e466e;
+    color: #ffffff;
+    display:flex;
+    flex-flow:column;
+}
+
+
+#help > label:hover ~ pre {
+    display: block;
+    position: absolute;
+    top: 4em;
+    background-color: #2e466e;
+    border-radius: 5px;
+    border: 1px solid #1f2f47;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 9px 13px;
+    margin: auto;
+    border: 1px solid grey;
+}
+
+#menu {
+    
+    flex-flow: column;
+    align-items: center;
+}
+
+#menu input {
+    border: 0px;
+    margin: 2px;
+    padding: 8px;
+    border-bottom: 1px solid #808080;
+    width: 8em;
+    font-size: large;
+}
+
+#options {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.input {
+    background-color: #2e466e;
+    border-radius: 5px;
+    border: 1px solid #1f2f47;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 9px 13px;
+}
+
+.input:hover {
+    background-color: #415989;
+}
+
+.input:active {
+    top: 1px;
+}
+
+.container {
+    flex-flow: column-reverse nowrap;
+    border: 1px solid #808080;
+    border-right: 0px;
+    margin-left: 2em;
+    display: none;
+    align-items: flex-start;
+}
+
+.container.partial {
+    display: flex;
+}
+
+#main{
+    display:flex;
+
+}
+
+
+
+#executor,#preset-selection{
+    display:flex;
+    flex-flow:column; 
+
+}
+#executor,
+#executor input {
+    background-color: #2e466e;
+    color: #ffffff;
+    border: 1px solid #000;
+    color: #00ff00;
+    width: 50%;
+    font-family: courier new;
+}
+#terminal{
+    overflow-y: auto;
+}
+
+#showpreset {
+    align-self:center;
+}
+#options * {
+    padding: 8px;
+    margin: 2px;
+    font: 11px;
+}
+
+#help > pre {
+    display: none;
+}
+
+#preset-selection {
+    position: relative;
+}
+
+.preset-option {
+    border:2px solid black;
+    overflow:hidden;
+}
+.preset-option:hover >  .desc {
+    max-height:1000px;
+}
+.preset-option > .desc{
+    max-height:0px;
+   
+}
+
+
+#presets {
+    display: none;
+    border-radius: 5px;
+    border: 2px solid grey;
+    bottom: 4em;
+    max-height:80vh;
+    overflow-y:auto;
+}
+
+
+
+.prompt-token:before {
+    content: ">>";
+}
+.data-2{
+    color:orange;
+}
+
+#explorer {
+    width:50%;
+    overflow: auto;
+    align-items: center;
+}
+#pattern {
+    align-self:flex-start;
+}
+
+#root {
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    width:100%; 
+}
+
+#root > .container {
+    margin: 0px;
+}
+
+.node {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.info {
+    min-width: 8em;
+}
+
+#cmdinput{
+	display: inline-block;
+}
+
+input.ok,
+.info.match {
+    background: rgb(23, 162, 55);
+    color: white;
+}
+input.new {
+    background-color: #cfd8dc;
+    color: rgba(0, 0, 0, 0.87)
+}
+.error {
+    background-color: #e53935;
+    color: white;
+}
